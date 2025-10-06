@@ -2,10 +2,7 @@
 
 ## Overview
 
-This repository provides a Go re-implementation of the educational
-[`maxDcb/C2ImplantPy`](https://github.com/maxDcb/C2ImplantPy) project. It reproduces the implant behaviour of the
-Python version while remaining compatible with the
-[Exploration C2](https://github.com/maxDcb/C2TeamServer) server.
+This repository contains a small Go implementation of an HTTP beacon compatible with the Exploration C2 framework available at [Exploration C2](https://github.com/maxDcb/C2TeamServer).
 
 The project contains two main packages:
 
@@ -34,10 +31,6 @@ Run the beacon, specifying the controller host, port, and scheme:
 ./beacon <host> <port> <http|https>
 ```
 
-The binary reuses the embedded HTTP listener profile from the original Python
-implant. For HTTPS endpoints the TLS certificate is not verified, mimicking the
-behaviour of the upstream project.
-
 ## Testing
 
 Unit tests cover handler registration, task execution, serialisation, and
@@ -46,9 +39,3 @@ command decoding behaviour:
 ```bash
 go test ./...
 ```
-
-## Disclaimer
-
-This repository is intended for educational exploration of command and control
-concepts. Use responsibly and only in lab environments where you have explicit
-permission to operate.
